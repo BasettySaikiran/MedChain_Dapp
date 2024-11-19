@@ -1,0 +1,164 @@
+/* Global Variables */
+:root {
+  --primary-color: #007bff;
+  --secondary-color: #333;
+  --background-color: rgba(255, 255, 255, 0.85); /* Semi-transparent white for overlay */
+  --font-family: "Roboto", Arial, sans-serif;
+  --button-hover-color: #0056b3;
+}
+
+/* Body Styling */
+body {
+  margin: 0;
+  font-family: var(--font-family);
+  background: url('./assets/blockchain-medical-concept-1.jpg') no-repeat center center fixed;
+  background-size: cover;
+  color: var(--secondary-color);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 100vh;
+  padding: 20px;
+}
+
+/* Root Container with Semi-Transparent Overlay */
+#root {
+  background: var(--background-color);
+  border-radius: 20px;
+  padding: 30px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+  max-width: 900px;
+  margin: auto;
+  text-align: center;
+  width: 100%;
+}
+
+/* Header Styling */
+h1 {
+  color: var(--primary-color);
+  font-size: 2.5rem;
+  margin-bottom: 20px;
+}
+
+h2 {
+  color: var(--secondary-color);
+  font-size: 2rem;
+  margin: 20px 0;
+}
+
+/* Navigation Links */
+nav {
+  margin-bottom: 20px;
+}
+
+nav a {
+  text-decoration: none;
+  font-size: 18px;
+  color: var(--primary-color);
+  margin: 0 15px;
+  font-weight: bold;
+  transition: color 0.3s ease;
+}
+
+nav a:hover {
+  text-decoration: underline;
+}
+
+nav a.active {
+  color: var(--button-hover-color);
+  text-decoration: underline;
+}
+
+/* Button Styling */
+button {
+  margin: 10px;
+  padding: 10px 20px;
+  background-color: var(--primary-color);
+  color: white;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  font-size: 16px;
+  transition: background-color 0.3s ease, transform 0.2s ease;
+}
+
+button:hover {
+  background-color: var(--button-hover-color);
+  transform: scale(1.05);
+}
+
+/* Input Styling */
+input {
+  margin: 10px 0;
+  padding: 12px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  width: calc(100% - 24px); /* Adjust for padding and border */
+  font-size: 16px;
+}
+
+input:focus {
+  border-color: var(--primary-color);
+  outline: none;
+  box-shadow: 0 0 5px rgba(0, 123, 255, 0.5);
+}
+
+/* File Input Styling */
+input[type="file"] {
+  padding: 5px;
+  border: none;
+  background-color: #f4f4f4;
+  cursor: pointer;
+}
+
+/* Button Group */
+button + button {
+  margin-left: 5px;
+}
+
+/* Table Styling (For Audit Logs) */
+table {
+  border-collapse: collapse;
+  width: 100%;
+  margin-top: 20px;
+}
+
+table th,
+table td {
+  border: 1px solid #ddd;
+  padding: 8px;
+  text-align: left;
+}
+
+table th {
+  background-color: var(--primary-color);
+  color: white;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+  body {
+    padding: 10px;
+  }
+
+  #root {
+    padding: 20px;
+  }
+
+  h1 {
+    font-size: 2rem;
+  }
+
+  h2 {
+    font-size: 1.5rem;
+  }
+
+  button {
+    font-size: 14px;
+    padding: 8px 16px;
+  }
+
+  input {
+    font-size: 14px;
+  }
+}
